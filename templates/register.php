@@ -16,26 +16,26 @@
   <h1 class="text-center mt-5 text-white">Registro de Cliente</h1>
   <div class="row">
     <div class="col-md-8 offset-md-2">
-      <form>
+      <form action="../BD/regis_cliente.php" method="POST">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group text-white text-center">
               <label for="nombre">Nombres:</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombres" required>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombres" required>
             </div>
             <div class="form-group text-white text-center">
               <label for="telefono">Telefono:</label>
-              <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su telefono" required>
+              <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su telefono" required>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group text-white text-center">
               <label for="apellido">Apellidos:</label>
-              <input type="text" class="form-control" id="apellido" placeholder="Ingrese el apellidos" required>
+              <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese el apellidos" required>
             </div>
             <div class="form-group text-white text-center">
               <label for="operadora">Operadora:</label>
-              <select class="form-control" id="operadora">
+              <select class="form-control" id="operadora" name="operadora">
                 <option value="">Seleccionar</option>
                 <option value="claro">Claro</option>
                 <option value="movistar">Movistar</option>
@@ -49,11 +49,11 @@
           <div class="col-md-6">
             <div class="form-group text-white text-center">
               <label for="email">Correo Electrónico:</label>
-              <input type="email" class="form-control" id="email" placeholder="Ingrese su correo" required>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo" required>
             </div>
             <div class="form-group text-white text-center">
               <label for="direccion">Direccion:</label>
-              <input type="text" class="form-control" id="direccion" placeholder="Ingrese su direccion" required>
+              <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingrese su direccion" required>
             </div>
           </div>
         </div>
@@ -61,11 +61,6 @@
           <button type="submit" class="btn bg-success w-75 text-white">Guardar</button>
         </div>
       </form>
-      <div class="text-center"><br>
-        <a href="../templates/login.html">
-          <button type="submit" class="btn btn-danger w-75">Regresar</button>
-        </a>
-      </div>
     </div>
   </div>
 </div>

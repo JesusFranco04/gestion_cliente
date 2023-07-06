@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
     $telefono = $_POST["telefono"];
-    $date_creation = date("Y-m-d"); // Fecha actual
     $contraseña = hash('sha512', $contraseña);
 
     // Incluir el archivo de conexión a la base de datos
@@ -14,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Consulta SQL para insertar un nuevo usuario
     $sql = "INSERT INTO usuarios (usuario, contraseña, nombre, apellido, telefono, date_creation)
-            VALUES ('$usuario', '$contraseña', '$nombre', '$apellido', '$telefono', '$date_creation')";
+            VALUES ('$usuario', '$contraseña', '$nombre', '$apellido', '$telefono', NOW())";
 
     // Ejecutar la consulta
     if ($conn->query($sql) === TRUE) {
