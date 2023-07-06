@@ -25,3 +25,6 @@ CREATE TABLE `gestion_clientes`.`usuarios` (
   PRIMARY KEY (`id_cliente`));
   
   select * from regis_cliente;
+
+
+

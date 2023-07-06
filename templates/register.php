@@ -37,12 +37,11 @@
               <label for="operadora">Operadora:</label>
               <select class="form-control" id="operadora" name="operadora">
                 <option value="">Seleccionar</option>
-                <option value="claro">Claro</option>
-                <option value="movistar">Movistar</option>
-                <option value="claro">Claro</option>
-                <option value="movistar">Movistar</option>
-                <option value="claro">Claro</option>
-                <option value="movistar">Movistar</option>
+                <option value="claro" id="operadora" name="operadora">Claro</option>
+                <option value="movistar" id="operadora" name="operadora">Movistar</option>
+                <option value="tuenti" id="operadora" name="operadora">tuenti</option>
+                <option value="cnt" id="operadora" name="operadora">cnt</option>
+
               </select>
             </div>
           </div>

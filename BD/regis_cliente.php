@@ -1,18 +1,23 @@
-// Obtener los datos del formulario
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 $nombre = $_POST['nombre'];
+$telefono = $_POST['telefono'];
 $apellido = $_POST['apellido'];
 $operadora = $_POST['operadora'];
-$email = $_POST['correo'];
+$email = $_POST['email'];
 $direccion = $_POST['direccion'];
-$telefono = $_POST['telefono'];
 
+
+require_once 'conexion.php';
 // Crear la consulta SQL para insertar los datos
-$sql = "INSERT INTO regis_cliente (nombre, apellido, operadora, email, direccion, telefono, date_creation)
-        VALUES ('$nombre', '$apellido', '$operadora', '$email', '$direccion', '$telefono', NOW())";
+$sql = "INSERT INTO regis_cliente (nombre, telefono, apellido, operadora, email, direccion, date_creation)
+        VALUES ('$nombre', '$telefono', '$apellido', '$operadora', '$email', '$direccion', NOW())";
 
 // Ejecutar la consulta
 if ($conn->query($sql) === TRUE) {
-    echo '<script>alert("Nuevo usuario insertado correctamente.");</script>';
+    echo '<script>alert("Cliente registrado correctamente.");</script>';
         echo '<script>location.href = "../templates/register.php";</script>';
         exit;
 } else {
@@ -21,4 +26,6 @@ if ($conn->query($sql) === TRUE) {
 
 // Cerrar la conexión
 $conn->close();
+
+}
 ?>
