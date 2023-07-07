@@ -91,7 +91,7 @@
     </nav>
 
     <div class="container">
-      <h1 class="mt-5 text-center">Tabla de Registro Clientes</h1>
+      <h1 class="mt-5 text-center">Tabla de Registro usuario</h1>
       <div class="mb-5 mt-5">
         <input
           type="text"
@@ -105,14 +105,11 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Id_cliente</th>
             <th>Nombres</th>
-            <th>Telefono</th>
             <th>Apellidos</th>
-            <th>Operadora</th>
-            <th>Correo Electrónico</th>
             <th>Dirección</th>
-            <th>Date_Creation</th>
+            <th>Teléfono</th>
+            <th>Correo Electrónico</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -122,9 +119,6 @@
             <td>Alvarado</td>
             <td>Isla trinitaria</td>
             <td>0957623415</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
             <td>nani@example.com</td>
             <td>
               <button
@@ -133,30 +127,9 @@
                 data-toggle="modal"
                 data-target="#modalActualizar"
               >
-              <i class='bx bx-user'></i>
+                Actualizar
               </button>
-              <button type="button" class="btn btn-danger"><i class='bx bx-exit'></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>Adnely</td>
-            <td>Alvarado</td>
-            <td>Isla trinitaria</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>nani@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-              <i class='bx bx-user'></i>
-              </button>
-              <button type="button" class="btn btn-danger"><i class='bx bx-exit'></i></button>
+              <button type="button" class="btn btn-danger">Eliminar</button>
             </td>
           </tr>
           <tr>
