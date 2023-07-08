@@ -27,4 +27,16 @@ CREATE TABLE `gestion_clientes`.`usuarios` (
   select * from regis_cliente;
 
 
+  CREATE TABLE `gestion_clientes`.`contacto` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cedula` VARCHAR(50) NOT NULL,
+  `nomape` VARCHAR(50) NOT NULL,
+  `telefono` VARCHAR(45) NOT NULL,
+  `operadora` VARCHAR(20) NOT NULL,
+  `descripcion` VARCHAR(100) NOT NULL,
+  `date_creation` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+  select * from contacto;
+
 
