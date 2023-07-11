@@ -102,317 +102,9 @@
         />
       </div>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Id_cliente</th>
-            <th>Nombres</th>
-            <th>Telefono</th>
-            <th>Apellidos</th>
-            <th>Operadora</th>
-            <th>Correo Electrónico</th>
-            <th>Dirección</th>
-            <th>Date_Creation</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Adnely</td>
-            <td>Alvarado</td>
-            <td>Isla trinitaria</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>nani@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-              <i class='bx bx-user'></i>
-              </button>
-              <button type="button" class="btn btn-danger"><i class='bx bx-exit'></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>Adnely</td>
-            <td>Alvarado</td>
-            <td>Isla trinitaria</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>0957623415</td>
-            <td>nani@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-              <i class='bx bx-user'></i>
-              </button>
-              <button type="button" class="btn btn-danger"><i class='bx bx-exit'></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>Carla</td>
-            <td>Espinoza</td>
-            <td>Guasmo sur</td>
-            <td>0987463255</td>
-            <td>carlaespi@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Jeimmy</td>
-            <td>Romero</td>
-            <td>Independencia 1</td>
-            <td>0947852365</td>
-            <td>jeimmyace@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Isabel</td>
-            <td>Mendez</td>
-            <td>Suburbio</td>
-            <td>0987654389</td>
-            <td>isamendez@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Angee</td>
-            <td>Soriano</td>
-            <td>Estación de la 28</td>
-            <td>0973644123</td>
-            <td>angeesori@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Dylan</td>
-            <td>Molina</td>
-            <td>Guasmo sur</td>
-            <td>0987634562</td>
-            <td>dylanmoli@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Paul</td>
-            <td>Mendoza</td>
-            <td>Floresta</td>
-            <td>0765489328</td>
-            <td>paulmendo@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Erick</td>
-            <td>Tumbaco</td>
-            <td>Doble cancha</td>
-            <td>0987643221</td>
-            <td>ericktumba@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Luis</td>
-            <td>Lopez</td>
-            <td>Guasmo central</td>
-            <td>0999784687</td>
-            <td>luislop@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Moises</td>
-            <td>Cortez</td>
-            <td>Pradera 1</td>
-            <td>0977844623</td>
-            <td>moicortez@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Carlos</td>
-            <td>Villao</td>
-            <td>Guasmo norte</td>
-            <td>0988635441</td>
-            <td>carlosvilla@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Karen</td>
-            <td>Rivas</td>
-            <td>Guasmo sur</td>
-            <td>0974626647</td>
-            <td>kareriva@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Helany</td>
-            <td>Navarrete</td>
-            <td>Union de bananeros</td>
-            <td>0987465235</td>
-            <td>helynava@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Meloddy</td>
-            <td>Suarez</td>
-            <td>Pablo neruda</td>
-            <td>0994477335</td>
-            <td>melosuarez@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Josue</td>
-            <td>Chilan</td>
-            <td>La Joya</td>
-            <td>0986335526</td>
-            <td>josuechil@example.com</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#modalActualizar"
-              >
-                Actualizar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <?php
+      require_once '../BD/regis_cliente.php';
+      ?>
     </div>
 
     <!-- Modal Actualizar -->
@@ -426,57 +118,65 @@
       <div class="modal-dialog">
         <div class="modal-content bg-success">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalActualizarLabel">
-              Actualizar Cliente
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body bg-success text-center">
-            <form>
-              <div class="mb-3">
-                <label for="nombres" class="form-label">Nombres</label>
-                <input type="text" class="form-control" id="nombres" />
-              </div>
-              <div class="mb-3">
-                <label for="apellidos" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="apellidos" />
-              </div>
-              <div class="mb-3">
-                <label for="direccion" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="direccion" />
-              </div>
-              <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="telefono" />
-              </div>
-              <div class="mb-3">
-                <label for="correo" class="form-label"
-                  >Correo Electrónico</label
+                <h5 class="modal-title" id="modalActualizarLabel">
+                  Actualizar Cliente
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
                 >
-                <input type="email" class="form-control" id="correo" />
+                  <span aria-hidden="true">&times;</span>
+                </button>
+          </div>
+          <form action="../BD/actualizar.php" method="post" id="formActualizar">
+            <div class="modal-body bg-success text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group text-white text-center">
+                    <label for="nombre">Nombres:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
+                  </div>
+                  <div class="form-group text-white text-center">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group text-white text-center">
+                    <label for="apellido">Apellidos:</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese los apellidos" required>
+                  </div>
+                  <div class="form-group text-white text-center">
+                    <label for="operadora">Operadora:</label>
+                    <select class="form-control" id="operadora" name="operadora">
+                      <option value="Claro">Claro</option>
+                      <option value="Movistar">Movistar</option>
+                      <option value="Tuenti">Tuenti</option>
+                      <option value="Cnt">Cnt</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group text-white text-center">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo" required>
+                  </div>
+                  <div class="form-group text-white text-center">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
+                  </div>
+                </div>
               </div>
-            </form>
-          </div>
-          <div class="modal-footer justify-content-center">
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <button type="button" class="btn btn-primary">
-              Guardar Cambios
-            </button>
-          </div>
-        </div>
+            </div>
+            <input type="hidden" id="id" name="id" value="">
+
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </div>    
+          </form>
       </div>
     </div>
     <script src="../js/bootstrap.min.js"></script>
@@ -516,6 +216,51 @@
         }
       }
     </script>
-    
+  <script>
+    $(document).ready(function() {
+        $('#modalActualizar').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget);
+            var id_cliente = button.data('id_cliente');
+            var nombre = button.data('nombre');
+            var telefono = button.data('telefono');
+            var apellido = button.data('apellido');
+            var operadoraIndex = button.data('operadora-index');
+            var email = button.data('email');
+            var direccion = button.data('direccion');
+
+            var modal = $(this);
+            modal.find('#nombre').val(nombre);
+            modal.find('#telefono').val(telefono);
+            modal.find('#apellido').val(apellido);
+            modal.find('#operadora').prop('selectedIndex', operadoraIndex);
+            modal.find('#email').val(email);
+            modal.find('#direccion').val(direccion);
+        });
+    });
+</script>
+<script>
+function cargarDatos(id) {
+  var nombre = document.getElementById('nombre');
+  var telefono = document.getElementById('telefono');
+  var apellido = document.getElementById('apellido');
+  var operadora = document.getElementById('operadora');
+  var email = document.getElementById('email');
+  var direccion = document.getElementById('direccion');
+  var form = document.getElementById('formActualizar');
+
+  // Asignar el valor del ID al campo oculto
+  form.id.value = id;
+
+  // Asignar los demás valores a los campos del formulario
+  var botonEditar = document.querySelector('button[data-id_cliente="' + id + '"]');
+  nombre.value = botonEditar.getAttribute('data-nombre');
+  telefono.value = botonEditar.getAttribute('data-telefono');
+  apellido.value = botonEditar.getAttribute('data-apellido');
+  operadora.selectedIndex = botonEditar.getAttribute('data-operadora-index');
+  email.value = botonEditar.getAttribute('data-email');
+  direccion.value = botonEditar.getAttribute('data-direccion');
+}
+
+  </script>
   </body>
 </html>
