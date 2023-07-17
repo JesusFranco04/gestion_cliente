@@ -9,8 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contraseña = hash('sha512', $contraseña);
 
     // Correos y contraseñas quemados
-    $correos_quemados = array("admin@gmail.com", "admin1@gmail.com");
-    $contraseña_quemada = "admin2023";
+    $correos_quemados = array("jesus_admin@gmail.com", "nicolle_admin@gmail.com",
+     "moises_admin@gmail.com",, "angie_admin@gmail.com");
+    $contraseña_quemada = "gestionclientes";
 
     if (in_array($usuario, $correos_quemados) && $contraseña == hash('sha512', $contraseña_quemada)) {
         // Credenciales válidas, iniciar sesión
