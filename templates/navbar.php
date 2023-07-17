@@ -19,23 +19,13 @@
       
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" 
-          onclick="confirmarCerrarSesion()" >Cerrar Sesion</a>
+          <a class="nav-link text-white" href="../BD/cerrarsesion.php">Cerrar Sesion</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<script>
-function confirmarCerrarSesion() {
-  if (confirm("¿Estás seguro que deseas cerrar sesión?")) {
-    window.location.href = "../templates/login.php";
-  } else {
-    return false;
-  }
-}
-</script>
 
 
 

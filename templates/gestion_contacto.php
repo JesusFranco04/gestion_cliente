@@ -107,7 +107,7 @@
     </nav>
 
     <div class="container">
-      <h1 class="mt-5 text-center">Tabla de Registro Usuario</h1>
+      <h1 class="mt-5 text-center">Tabla de Registro Contactos</h1>
       <div class="mb-5 mt-5">
         <input
           type="text"
@@ -119,67 +119,10 @@
       </div>
 
       <?php
-      require_once '../BD/usuarios.php';
+      require_once '../BD/contacto.php';
       ?>
     </div>
 
-    <!-- Modal Actualizar -->
-    <div
-      class="modal fade"
-      id="modalActualizar"
-      tabindex="-1"
-      aria-labelledby="modalActualizarLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content bg-success">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalActualizarLabel">
-              Actualizar Usuarios
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body bg-success text-center">
-            <form action="../BD/actualizar_usu.php" method="post" id="formActualizar">
-            <div class="mb-3">
-                <label for="username" class="form-label"
-                  >Correo Electrónico</label>
-                <input type="email" class="form-control" id="username" name="username"/>
-              </div>
-
-              <div class="mb-3">
-                <label for="contraseña" class="form-label">Nombres</label>
-                <input type="password" class="form-control" id="contraseña" name="contraseña" disabled/>
-              </div>
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombres</label>
-                <input type="text" class="form-control" id="nombre" name="nombre"/>
-              </div>
-              <div class="mb-3">
-                <label for="apellido" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="apellido" name="apellido"/>
-              </div>
-              <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="telefono" name="telefono" oninput="validarTelefono(this)" />
-              </div>
-              <input type="hidden" id="id" name="id" value="">
-              <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-              </div> 
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -217,64 +160,7 @@
         }
       }
     </script>
-    <script>
-    $(document).ready(function() {
-        $('#modalActualizar').on('show.bs.modal', function(event) {
-            var button = $(event.relatedTarget);
-            var id_usur = button.data('id_usur');
-            var username = button.data('username');
-            var contraseña = button.data('contraseña');
-            var nombre = button.data('nombre');
-            var apellido = button.data('apellido');
-            var telefono = button.data('telefono');
 
-            var modal = $(this);
-            modal.find('#username').val(username);
-            modal.find('#contraseña').val(contraseña);
-            modal.find('#nombre').val(nombre);
-            modal.find('#apellido').val(apellido);
-            modal.find('#telefono').val(telefono);
-        });
-    });
-  </script>
-  <script>
-  function cargarDatos(id) {
-    var username = document.getElementById('username');
-    var contraseña = document.getElementById('contraseña');
-    var nombre = document.getElementById('nombre');
-    var apellido = document.getElementById('apellido');
-    var telefono = document.getElementById('telefono');
     
-    var form = document.getElementById('formActualizar');
-
-    // Asignar el valor del ID al campo oculto
-    form.id.value = id;
-
-    // Asignar los demás valores a los campos del formulario
-    var botonEditar = document.querySelector('button[data-id_usur="' + id + '"]');
-    username.value = botonEditar.getAttribute('data-username');
-    contraseña.value = botonEditar.getAttribute('data-contraseña');
-    nombre.value = botonEditar.getAttribute('data-nombre');
-    apellido.value = botonEditar.getAttribute('data-apellido');
-    telefono.value = botonEditar.getAttribute('data-telefono');
-  }
-
-    </script>
-
-<script>
-function validarTelefono(input) {
-    // Obtener el valor ingresado en el campo de entrada
-    var telefono = input.value;
-
-    // Eliminar cualquier carácter que no sea un número
-    telefono = telefono.replace(/\D/g, '');
-
-    // Limitar el número de dígitos a 10
-    telefono = telefono.slice(0, 10);
-
-    // Actualizar el valor del campo de entrada con los dígitos válidos
-    input.value = telefono;
-}
-</script>
   </body>
 </html>

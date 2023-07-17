@@ -26,7 +26,12 @@
                 <div class="input-field">
                     <input type="Password" class="input" placeholder="Password" id="contraseña" name="contraseña" required>
                     <i class='bx bx-lock-alt'></i>
-                </div>
+                    <br>
+                <label for="toggleCheckbox" style="color: white;">
+                    <input  type="checkbox" id="toggleCheckbox" onclick="togglePasswordVisibility()">
+                    Mostrar contraseña
+                </label>
+                </div><br>
 
                 <div class="input-field">
                     <input type="text" class="input" placeholder="Nombres" id="nombre" name="nombre" required>
@@ -39,10 +44,9 @@
                 </div>
 
                 <div class="input-field">
-                    <input type="tel" class="input" placeholder="Telefono" id="telefono" name="telefono" required>
-                    <i class='bx bx-phone' ></i>
+                    <input type="text" class="input" placeholder="Telefono" id="telefono" name="telefono" oninput="validarTelefono(this)" required>
+                    <i class='bx bx-phone'></i>
                 </div>
-                
 
                 <div class="input-field">   
                     <input type="submit" class="submit" value="Registrar" id="register" name="register">
@@ -56,4 +60,20 @@
     </div>
 </div>        
 </body>
+
+<script>
+function validarTelefono(input) {
+    // Obtener el valor ingresado en el campo de entrada
+    var telefono = input.value;
+
+    // Eliminar cualquier carácter que no sea un número
+    telefono = telefono.replace(/\D/g, '');
+
+    // Limitar el número de dígitos a 10
+    telefono = telefono.slice(0, 10);
+
+    // Actualizar el valor del campo de entrada con los dígitos válidos
+    input.value = telefono;
+}
+</script>
 </html>

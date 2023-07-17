@@ -1,3 +1,19 @@
+<?php 
+
+    session_start();
+    if(!isset($_SESSION['usuario'])){
+        echo '
+        <script>alert("Por favor Identificate");
+        window.location = "../templates/login_admin.php";
+        </script>;
+        ';
+      session_destroy();
+      die();
+      
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -73,14 +89,14 @@
               <li class="nav-item">
                 <a
                   class="nav-link text-white"
-                  href="../templates/gestion_llamadas.php"
-                  ><i class='bx bx-phone'></i> Gestion_Llamadas</a
+                  href="../templates/gestion_contacto.php"
+                  ><i class='bx bx-phone'></i> Gestion_Contacto</a
                 >
               </li>
             </ul>
           </div>
           <div class="offcanvas-footer">
-            <form class="d-flex" role="search" action="../templates/login.php">
+            <form class="d-flex" role="search" action="../BD/cerraradmin.php">
               <button class="btn btn-success w-100" type="submit"
                 ><i class='bx bx-exit'></i> Salir</button
               >
@@ -140,7 +156,7 @@
                   </div>
                   <div class="form-group text-white text-center">
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" oninput="validarTelefono(this)" placeholder="Ingrese su teléfono" required>
                   </div>
                 </div>
                 <div class="col-md-12">
@@ -262,5 +278,21 @@ function cargarDatos(id) {
 }
 
   </script>
+
+<script>
+function validarTelefono(input) {
+    // Obtener el valor ingresado en el campo de entrada
+    var telefono = input.value;
+
+    // Eliminar cualquier carácter que no sea un número
+    telefono = telefono.replace(/\D/g, '');
+
+    // Limitar el número de dígitos a 10
+    telefono = telefono.slice(0, 10);
+
+    // Actualizar el valor del campo de entrada con los dígitos válidos
+    input.value = telefono;
+}
+</script>
   </body>
 </html>

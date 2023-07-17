@@ -1,3 +1,19 @@
+<?php 
+
+    session_start();
+    if(!isset($_SESSION['usuario'])){
+        echo '
+        <script>alert("Por favor debes inicar sesion");
+        window.location = "../templates/login.php";
+        </script>;
+        ';
+      session_destroy();
+      die();
+      
+    }
+
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +41,7 @@
             </div>
             <div class="form-group text-white text-center">
               <label for="telefono">Telefono:</label>
-              <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su telefono" required>
+              <input type="tel" class="form-control" id="telefono" name="telefono" oninput="validarTelefono(this)" placeholder="Ingrese su telefono" required>
             </div>
           </div>
           <div class="col-md-6">
@@ -35,7 +51,7 @@
             </div>
             <div class="form-group text-white text-center">
               <label for="operadora">Operadora:</label>
-              <select class="form-control" id="operadora" name="operadora">
+              <select class="form-control" id="operadora" name="operadora" required>
                 <option value="">Seleccionar</option>
                 <option value="claro" id="operadora" name="operadora">Claro</option>
                 <option value="movistar" id="operadora" name="operadora">Movistar</option>
@@ -65,4 +81,20 @@
 </div>
 
 </body>
+
+<script>
+function validarTelefono(input) {
+    // Obtener el valor ingresado en el campo de entrada
+    var telefono = input.value;
+
+    // Eliminar cualquier carácter que no sea un número
+    telefono = telefono.replace(/\D/g, '');
+
+    // Limitar el número de dígitos a 10
+    telefono = telefono.slice(0, 10);
+
+    // Actualizar el valor del campo de entrada con los dígitos válidos
+    input.value = telefono;
+}
+</script>
 </html>

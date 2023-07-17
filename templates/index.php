@@ -1,4 +1,18 @@
+<?php 
 
+    session_start();
+    if(!isset($_SESSION['usuario'])){
+        echo '
+        <script>alert("Por favor debes inicar sesion");
+        window.location = "../templates/login.php";
+        </script>;
+        ';
+      session_destroy();
+      die();
+      
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +28,7 @@
     include_once('navbar.php');
     ?>
         <div class="container">
-          <h1 class="text-white mt-3 text-center">Gestión de Clientes1</h1>
+          <h1 class="text-white mt-3 text-center">Gestión de Clientes</h1>
           <div class="row">
             <div class="col-md-6">
               <img class="w-100" src="../imagenes/1fcola.jpg" alt="Imagen de gestión">

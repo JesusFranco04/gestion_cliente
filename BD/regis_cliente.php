@@ -78,7 +78,11 @@ if ($result->num_rows > 0) {
         data-email="' . $row['email'] . '"
         data-direccion="' . $row['direccion'] . '"
         onclick="cargarDatos(' . $row['id_cliente'] . ')"><i class="bx bx-edit"></i></button>';
-        echo '<button type="button" class="btn btn-danger"><i class="bx bx-trash"></i></button>';
+        echo '<form id="formEliminar_' . $row['id_cliente'] . '" method="POST" action="../BD/delete.php">';
+        echo '<input type="hidden" name="id_cliente" value="' . $row['id_cliente'] . '">';
+        echo '<button type="button" class="btn btn-danger" onclick="eliminarUsuario(' . $row['id_cliente'] . ')"><i class="bx bx-trash"></i></button>';
+        echo '</form>';
+
         echo '</td>';
         echo '</tr>';
     }
@@ -98,6 +102,42 @@ function obtenerIndiceOperadora($operadora) {
 $conn->close();
 ?>
 
+<script>
+function eliminarUsuario(idUsuario) {
+  if (confirm("¿Estás seguro de que deseas eliminar este usuario?")) {
+    var formId = 'formEliminar_' + idUsuario;
+    var form = document.getElementById(formId);
+    
+    // Crear una nueva solicitud AJAX
+    var xhr = new XMLHttpRequest();
+    
+    // URL del archivo PHP que procesará el formulario
+    var url = form.getAttribute('action');
+    
+    // Datos a enviar en la solicitud POST (el ID del usuario)
+    var params = 'id_cliente=' + idUsuario;
+
+    
+    // Configurar la solicitud
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    
+    // Manejar la respuesta de la solicitud
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        // Mostrar la respuesta en la consola
+        console.log(xhr.responseText);
+        
+        // Actualizar la página o realizar otras acciones necesarias
+        location.reload();
+      }
+    };
+    
+    // Enviar la solicitud
+    xhr.send(params);
+  }
+}
+</script>
 
 
 

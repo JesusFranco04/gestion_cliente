@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href='../css/boxicons.css' rel='stylesheet'>
 
-    <title>Login</title>
+    <title>Administrador</title>
 
 </head>
 <body>
@@ -17,15 +18,15 @@
     <div class="container">
 
         <div class="top">
-            <header>Login</header>
+            <header>Administrador</header>
         </div>
-        <form method="post" action="../BD/iniciar.php">
+        <form method="post" action="../BD/funcion.php">
            
             <div class="input-field">
                 <input type="email" class="input" placeholder="Username" id="username" name="username" required>
                 <i class='bx bx-user' ></i>
             </div>
-    
+
             <div class="input-field">
                 <input type="password" class="input" placeholder="Password" id="contraseña" name="contraseña" required>
                 <i class="bx bx-lock-alt"></i><br>
@@ -36,22 +37,17 @@
             </div>
             <br>
 
-
             <div class="input-field">
-                <input type="submit" class="submit" value="Iniciar Sesion" id="inicio" name="inicio">
+                <input type="submit" class="submit" value="Iniciar" id="inicio" name="inicio">
             </div>
             
         </form>
         <div class="input-field"><br>
-                <a href="../templates/registro.php">
-                    <input type="submit" class="submit" value="Registrate" id="register" name="register">
+                <a href="../templates/login.php">
+                    <input type="submit" class="submit" value="Regresar" id="regresar" name="regresar">
                 </a>
             </div>
-            <div class="input-field"><br>
-                <a href="../templates/login_admin.php">
-                    <input type="submit" class="submit" value="Admin" id="Admin" name="admin">
-                </a>
-            </div>
+      
     </div>
    </div>  
 </body>
@@ -69,3 +65,4 @@ function togglePasswordVisibility() {
 
 </script>
 </html>
+

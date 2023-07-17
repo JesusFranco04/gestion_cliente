@@ -1,3 +1,22 @@
+<?php 
+
+    session_start();
+    if(!isset($_SESSION['usuario'])){
+        echo '
+        <script>alert("Por favor Identificate");
+        window.location = "../templates/login_admin.php";
+        </script>;
+        ';
+      session_destroy();
+      die();
+      
+    }
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,15 +48,15 @@
     </style>
   <body>
     <div class="content">
-      <h1 style="font-size: 100px;color:black;font-weight: bold;">Bienvenido Admin</h1>
+      <h1 style="font-size: 50px;color:black;font-weight: bold;"><?php echo 'Bienvenido, ' . $_SESSION['usuario'];?></h1>
     </div>
     <nav class="navbar navbar-dark bg-primary fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand">ADMINISTRADOR <i class='bx bx-user'></i></a>
         <button
           class="navbar-toggler bg-dark"
-          type="button"
-          data-bs-toggle="offcanvas"
+            type="button"
+            data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasDarkNavbar"
           aria-controls="offcanvasDarkNavbar"
           aria-label="Toggle navigation"
@@ -80,14 +99,14 @@
               <li class="nav-item">
                 <a
                   class="nav-link text-white"
-                  href="../templates/gestion_llamadas.php"
-                  ><i class='bx bx-phone'></i> Gestion_Llamadas</a
+                  href="../templates/gestion_contacto.php"
+                  ><i class='bx bx-phone'></i> Gestion_Contacto</a
                 >
               </li>
             </ul>
           </div>
           <div class="offcanvas-footer">
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" action="../BD/cerraradmin.php">
               <button class="btn btn-success w-100" type="submit"
                 ><i class='bx bx-exit'></i> Salir</button
               >
