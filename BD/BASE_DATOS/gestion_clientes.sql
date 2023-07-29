@@ -11,7 +11,7 @@ CREATE TABLE `gestion_clientes`.`usuarios` (
   `date_creation` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_usur`));
   
-  select * from usuarios;
+
   
   CREATE TABLE `gestion_clientes`.`regis_cliente` (
   `id_cliente` INT NOT NULL AUTO_INCREMENT,
@@ -24,7 +24,6 @@ CREATE TABLE `gestion_clientes`.`usuarios` (
   `date_creation` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_cliente`));
   
-  select * from regis_cliente;
 
 
   CREATE TABLE `gestion_clientes`.`contacto` (
@@ -37,6 +36,20 @@ CREATE TABLE `gestion_clientes`.`usuarios` (
   `date_creation` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`));
 
-  select * from contacto;
+CREATE TABLE `gestion_clientes`.`administradores` (
+  `id_admin` INT NOT NULL AUTO_INCREMENT,
+  `usuario` TEXT NOT NULL,
+  `contraseña` VARCHAR(500) NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `date_creation` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_admin`));
 
 
+INSERT INTO administradores (id_admin, usuario, contraseña, nombre, date_creation)
+VALUES (1, 'admin@gmail.com', SHA2('gestioncliente', 512), 'jesus franco', NOW());
+
+
+
+
+
+  

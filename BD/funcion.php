@@ -1,26 +1,33 @@
+
 <?php
 
-session_start(); // Iniciar sesión
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Datos del formulario
     $usuario = $_POST["username"];
     $contraseña = $_POST["contraseña"];
+    $nombre = $_POST["nombre"];
     $contraseña = hash('sha512', $contraseña);
 
-    // Correos y contraseñas quemados
-    $correos_quemados = array("jesus_admin@gmail.com", "nicolle_admin@gmail.com",
-     "moises_admin@gmail.com",, "angie_admin@gmail.com");
-    $contraseña_quemada = "gestionclientes";
+    // Incluir el archivo de conexión a la base de datos
+    require_once 'conexion.php';
 
-    if (in_array($usuario, $correos_quemados) && $contraseña == hash('sha512', $contraseña_quemada)) {
-        // Credenciales válidas, iniciar sesión
+    // Consulta SQL para insertar un nuevo usuario
+    $sql = "INSERT INTO administradores (usuario, contraseña, nombre, date_creation)
+            VALUES ('$usuario', '$contraseña', '$nombre', NOW())";
+
+    // Ejecutar la consulta
+    if ($conn->query($sql) === TRUE) {
         $_SESSION['usuario'] = $usuario;
-        header("Location: ../templates/administrador.php"); 
+        echo '<script>alert("Administrador insertado correctamente.");</script>';
+        echo '<script>location.href = "../templates/administrador.php";</script>';
         exit;
     } else {
-        echo '<script>alert("Admin incorrecto!"); window.location.href = "../templates/administrador.php";</script>';
+        echo "Error al insertar el admin: " . $conn->error;
     }
+
+    // Cerrar la conexión (opcional, ya que se cerrará automáticamente al final del script)
+    $conn->close();
 }
 ?>
-

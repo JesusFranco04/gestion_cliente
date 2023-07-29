@@ -8,15 +8,15 @@
     <link href='../css/boxicons.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/prueba.css">
 
-    <title>Login/Registro</title>
+    <title>Registro_Admin</title>
 </head>
 <body>
 
 <div class="box">
     <div class="container">
-        <form method="post" action="../BD/usuarios.php"><br><br><br>
+        <form method="post" action="../BD/funcion.php"><br><br><br>
             <div class="top">
-                <header>Registrate</header>
+                <header>Registra el Usuario admin</header>
             </div><br>
         <div class="input-field">
                     <input type="email" class="input" placeholder="Username" id="username" name="username" required>
@@ -34,29 +34,18 @@
                 </div><br>
 
                 <div class="input-field">
-                    <input type="text" class="input" placeholder="Nombres" id="nombre" name="nombre" required>
+                    <input type="text" class="input" placeholder="Nombre y apellido" id="nombre" name="nombre" required>
                     <i class='bx bx-user' ></i>
                 </div>
-
-                <div class="input-field">
-                    <input type="text" class="input" placeholder="Apellido" id="apellido" name="apellido" required>
-                    <i class='bx bx-user' ></i>
-                </div>
-
-                <div class="input-field">
-                    <input type="text" class="input" placeholder="Telefono" id="telefono" name="telefono" oninput="validarTelefono(this)" required>
-                    <i class='bx bx-phone'></i>
-                </div>
-
                 <div class="input-field">   
-                    <input type="submit" class="submit" value="Registrar" id="register" name="register">
+                    <input type="submit" class="submit" value="Registrar Admin" id="register" name="register">
                 </div>
             </div>
         </form>
         
     </div>
     <div class="button-container">
-        <a href="../templates/login.php" class="button">Volver</a>
+        <a href="../templates/administrador.php" class="button">Volver</a>
     </div>
 </div>        
 </body>
@@ -77,20 +66,4 @@ function togglePasswordVisibility() {
 </script>
 
 
-<script>
-    
-function validarTelefono(input) {
-    // Obtener el valor ingresado en el campo de entrada
-    var telefono = input.value;
-
-    // Eliminar cualquier carácter que no sea un número
-    telefono = telefono.replace(/\D/g, '');
-
-    // Limitar el número de dígitos a 10
-    telefono = telefono.slice(0, 10);
-
-    // Actualizar el valor del campo de entrada con los dígitos válidos
-    input.value = telefono;
-}
-</script>
 </html>

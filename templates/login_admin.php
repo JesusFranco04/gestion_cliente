@@ -20,7 +20,7 @@
         <div class="top">
             <header>Administrador</header>
         </div>
-        <form method="post" action="../BD/funcion.php">
+        <form method="post" action="../BD/login_admin.php">
            
             <div class="input-field">
                 <input type="email" class="input" placeholder="Username" id="username" name="username" required>

@@ -26,7 +26,7 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     />
-    <title>Listado de clientes</title>
+    <title>ADMINISTRADOR</title>
     <link rel="stylesheet" href="../css/index.css" />
   </head>
   <style>
@@ -91,6 +91,13 @@
                   class="nav-link text-white"
                   href="../templates/gestion_contacto.php"
                   ><i class='bx bx-phone'></i> Gestion_Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  href="../templates/regis_admin.php"
+                  ><i class='bx bx-user'></i> Registro de Administradores</a
                 >
               </li>
             </ul>
